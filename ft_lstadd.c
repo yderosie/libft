@@ -6,7 +6,7 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:32:13 by yderosie          #+#    #+#             */
-/*   Updated: 2014/11/24 14:10:39 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/08 02:17:41 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (new)
+
+	if (alst && new)
 	{
 		new->next = *alst;
 		*alst = new;

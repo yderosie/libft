@@ -6,7 +6,7 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 11:11:37 by yderosie          #+#    #+#             */
-/*   Updated: 2014/12/27 16:18:23 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/06 07:12:18 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ static char		*ft_nbr(int n, int *i)
 	size_t	m;
 	size_t	save;
 
-	if (n < 0)
-		save = -n;
-	else
-		save = n;
+	save = (n < 0) ? -n : n;
 	j = save;
 	m = save;
 	s2 = (char *)malloc(sizeof(*s2) * (1 + 11));
@@ -66,9 +63,8 @@ char			*ft_itoa(int n)
 			s1[0] = '-';
 			k++;
 		}
-		i = i - 1;
 		while (i >= 0)
-			s1[k++] = s2[i--];
+			s1[k++] = s2[--i];
 		s1[k] = '\0';
 		return (s1);
 	}

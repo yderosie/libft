@@ -6,11 +6,12 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:38:03 by yderosie          #+#    #+#             */
-/*   Updated: 2014/11/17 14:08:09 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/06 08:04:53 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strnstr(char const *s1, char const *s2, size_t n)
 {

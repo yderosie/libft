@@ -6,7 +6,7 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 16:44:37 by yderosie          #+#    #+#             */
-/*   Updated: 2014/11/24 13:03:34 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/08 02:34:44 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*list;
 
-	list = (t_list *)malloc(sizeof(t_list));
+	list = (t_list *)malloc(sizeof(*list));
 	if (list == NULL)
 		return (NULL);
 	if (content == NULL)

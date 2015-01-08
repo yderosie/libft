@@ -6,7 +6,7 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/13 12:04:18 by yderosie          #+#    #+#             */
-/*   Updated: 2014/11/13 12:29:47 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/08 02:21:39 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	if (*alst)
 	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		(*alst)->content = NULL;
-		del((*alst)->next, (*alst)->content_size);
-		free(*alst);
-		(*alst)->next = NULL;
+		while (*alst)
+		{
+			del((*alst)->content, (*alst)->content_size);
+			free(*alst);
+			*alst  = (*alst)->next;
+		}
+		*alst = NULL;
 	}
 }

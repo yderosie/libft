@@ -6,7 +6,7 @@
 /*   By: yderosie <yderosie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 17:41:03 by yderosie          #+#    #+#             */
-/*   Updated: 2014/12/28 14:24:07 by yderosie         ###   ########.fr       */
+/*   Updated: 2015/01/06 08:08:46 by yderosie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*s1;
-	char	*s2;
+	char		*s1;
+	char		*s2;
 	size_t		i;
 
 	i = 0;
